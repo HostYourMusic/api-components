@@ -1,26 +1,31 @@
 {
-  "name": "common-apis",
+  "name": "@HostYourMusic/api-components",
   "version": "1.0.0",
   "configFileVersion": "1.0.0",
   "description": "Host Your Music - Common objects to be shared among the microservices",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@HostYourMusic"
+  },
   "engines": {
     "node": ">=12.0.0",
     "npm": ">=6.0.0"
   },
   "scripts": {
-    "test:all": "jest",
-    "test": "jest test/unit/**",
-    "test:component": "jest test/component/**",
-    "test:watch": "jest test/unit/** --watch",
-    "test:coverage": "jest test/unit/** --coverage",
+    "test:all": "npx jest",
+    "test": "npx jest test/unit/**",
+    "test:component": "npx jest test/component/**",
+    "test:watch": "npx jest test/unit/** --watch",
+    "test:coverage": "",
+    "test:_full_coverage": "jest test/unit/** --coverage",
     "coverage": "npm run test:coverage",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "format": "npx prettier --write 'src/**/*.{ts,js}'",
     "eslint:src": "npx eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",
     "eslint:test": "npx eslint 'test/**/*.{js,ts,tsx}' --quiet --fix",
     "eslint": "npm run eslint:test; npm run eslint:src",
     "pre-push": "rm -rf reports/ build/; npm run eslint; tsc;",
     "clean": "rm -rf node_modules/ reports/ .webpack/ build/ ./coverage",
-    "build": "npm run clean; npm ci; npm run eslint; npm run test:coverage"
+    "_build": "npm run clean; npm ci; npm run eslint; npm run test:coverage",
+    "build": "npm run clean; npm ci"
   },
   "husky": {
     "hooks": {
@@ -55,6 +60,7 @@
     "husky": "^4.2.5",
     "jest": "^26.0.1",
     "reflect-metadata": "^0.1.13",
+    "semantic-release": "^17.1.1",
     "ts-jest": "^26.1.1",
     "ts-loader": "^7.0.5",
     "ts-node": "^8.10.2",
