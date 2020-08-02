@@ -1,8 +1,11 @@
 {
-  "name": "common-apis",
+  "name": "@HostYourMusic/common-apis",
   "version": "1.0.0",
   "configFileVersion": "1.0.0",
   "description": "Host Your Music - Common objects to be shared among the microservices",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "engines": {
     "node": ">=12.0.0",
     "npm": ">=6.0.0"
@@ -21,7 +24,8 @@
     "eslint": "npm run eslint:test; npm run eslint:src",
     "pre-push": "rm -rf reports/ build/; npm run eslint; tsc;",
     "clean": "rm -rf node_modules/ reports/ .webpack/ build/ ./coverage",
-    "build": "npm run clean; npm ci; npm run eslint; npm run test:coverage"
+    "_build": "npm run clean; npm ci; npm run eslint; npm run test:coverage",
+    "build": "npm run clean; npm ci"
   },
   "husky": {
     "hooks": {
