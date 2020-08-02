@@ -23,7 +23,7 @@ enum IssueType {
   STRUCTURE = "structure",
   SUPPRESSED = "suppressed",
   TIMEOUT = "timeout",
-  VALUE = "value"
+  VALUE = "value",
 }
 
 export default IssueType;
