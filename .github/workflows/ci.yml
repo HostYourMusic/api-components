@@ -1,4 +1,4 @@
-name: CI
+name: HYM-api-components-CI
 on:
   pull_request:
     branches: [ develop ]
@@ -11,6 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Cache node_modules
+        uses: actions/cache@v1
+        with:
+          node-path: ~/.npm
+          key: ${{ runner.os }}-${{github.workflow}}-${{ hashFiles('**/package-lock.json') }}
+          restore-key: |
+            ${{ runner.os }}-${{github.workflow}}-
       - name: Setup NodeJS
         uses: actions/setup-node@v1
         with:
@@ -25,4 +32,4 @@ jobs:
         run: npm run build
       - name: Deploy to TEST environment
         if: github.event_name == 'push'
-        run: echo 'DEPLOYNG TO TEST'
+        run: echo 'DEPLOYNG ${{github.workflow}} TO TEST'
