@@ -16,7 +16,7 @@ jobs:
         with:
           path: ~/.npm
           key: ${{ runner.os }}-${{github.workflow}}-${{ hashFiles('**/package-lock.json') }}
-          restore-key: |
+          restore-keys: |
             ${{ runner.os }}-${{github.workflow}}-
       - name: Setup NodeJS
         uses: actions/setup-node@v1
