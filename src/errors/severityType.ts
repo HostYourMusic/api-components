@@ -4,10 +4,10 @@
  * Rodrigo de Souza - rsouza01@gmail.com
  */
 
- enum SeverityType {
+enum SeverityType {
   FATAL = "fatal",
   ERROR = "error",
-  WARNING = "warning"
+  WARNING = "warning",
 }
 
 export default SeverityType;

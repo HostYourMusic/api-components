@@ -6,7 +6,7 @@
 
 enum ResourceType {
   AUDIO_TYPE = "AUDIO",
-  VIDEO_TYPE = "VIDEO"
+  VIDEO_TYPE = "VIDEO",
 }
 
 export default ResourceType;
