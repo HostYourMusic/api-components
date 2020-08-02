@@ -15,5 +15,5 @@ jobs:
       - run: npm ci
       - run: npm run format
       - run: npm run coverage
-          env:
-            CI: true
+        env:
+          CI: true
