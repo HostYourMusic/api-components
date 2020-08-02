@@ -4,7 +4,6 @@
  * Rodrigo de Souza - rsouza01@gmail.com
  */
 
-
 import ErrorObject from "./errorObject";
 import ErrorSeverity from "./severityType";
 import IssueType from "./issueType";
@@ -17,7 +16,7 @@ export default abstract class BaseError extends Error {
   public severity: ErrorSeverity;
   public issue: IssueType;
 
-  constructor(errorObj: ErrorObject,  data: any = {}) {
+  constructor(errorObj: ErrorObject, data: any = {}) {
     super(errorObj.message);
 
     this.code = errorObj.code;

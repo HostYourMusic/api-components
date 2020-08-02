@@ -8,7 +8,7 @@ import { BaseError } from "../errors";
 import { Resource } from "../models";
 
 export default interface ResponseObject {
-  statusCode: number,
-  data?: Resource | Resource[],
-  error?: BaseError
+  statusCode: number;
+  data?: Resource | Resource[];
+  error?: BaseError;
 }

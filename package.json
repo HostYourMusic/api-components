@@ -14,7 +14,7 @@
     "test:watch": "npx jest test/unit/** --watch",
     "test:coverage": "jest test/unit/** --coverage",
     "coverage": "npm run test:coverage",
-    "format": "npx prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "format": "npx prettier --write 'src/**/*.{ts,js}'",
     "eslint:src": "npx eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",
     "eslint:test": "npx eslint 'test/**/*.{js,ts,tsx}' --quiet --fix",
     "eslint": "npm run eslint:test; npm run eslint:src",
