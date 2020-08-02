@@ -1,5 +1,5 @@
 {
-  "name": "@HostYourMusic/common-apis",
+  "name": "@HostYourMusic/api-components",
   "version": "1.0.0",
   "configFileVersion": "1.0.0",
   "description": "Host Your Music - Common objects to be shared among the microservices",
