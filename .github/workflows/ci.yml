@@ -35,6 +35,7 @@ jobs:
         run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Deploy to TEST environment
         if: github.event_name == 'push'
         run: echo 'DEPLOYNG ${{github.workflow}} TO TEST'
